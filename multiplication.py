@@ -35,11 +35,11 @@ def boothes(a,b):
 	count=11
 	newplier=11*"0"+plier+"0"
 	for i in range(count):
-		print(newplier)
+		print(newplier[:11],newplier[11:22],newplier[22])
 		# print(len(newplier))
 		newplier=operate(newplier,plicand)
 
-	return newplier
+	return newplier[:22]
 print("Enter multiplicand : ")
 a=int(input())
 print("Enter multipier : ")
