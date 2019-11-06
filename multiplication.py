@@ -1,4 +1,5 @@
 #10 bit input 
+from helper import *
 def check_overflow(a,b,c):
 	if sign(a)*sign(b)==-1:
 		return False
@@ -13,7 +14,7 @@ def sign(a):
 def operate(a,plicand):
 	decider=a[-2]+a[-1]
 	if decider=="10":
-		add(a[:11],complement(plicand))
+		add(a[:11],convert_twos_complement(plicand))
 	if decider=="01":
 		add(a[:11],plicand)
 	return rightShift(a)
@@ -31,14 +32,15 @@ def boothes(a,b):
 	plier=bin(b)[2:]
 	plier="0"*(11-len(plier))+plier
 	count=11
-	newplier=11*"0"+plier+0
+	newplier=11*"0"+plier+"0"
 	for i in range(count):
-		newplier=operate(newplier)
+		newplier=operate(newplier,plicand)
 	return newplier
 print("Enter multiplicand : ")
 a=int(input())
 print("Enter multipier : ")
 b=int(input())
+print(boothes(a,b))
 
 
 
