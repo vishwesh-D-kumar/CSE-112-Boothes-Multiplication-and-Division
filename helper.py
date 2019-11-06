@@ -10,6 +10,20 @@ def decimal_to_binary(n):
 
 
 def convert_twos_complement(n):
+	f=0
+	if(n<0):
+		f=1
+		n=-n
+	n=decimal_to_binary(n)
+	# print(n)
+	if f==1:
+		n=list(n)
+		for i in range(len(n)):
+			n[i]=str(1-int(n[i]))
+		n="".join(n)
+		n=add(n,decimal_to_binary(1))
+	return n
+def twos_complement(n):
 	n=list(n)
 	for i in range(len(n)):
 		n[i]=str(1-int(n[i]))
