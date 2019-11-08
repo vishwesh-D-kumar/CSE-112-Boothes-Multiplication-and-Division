@@ -14,7 +14,7 @@ def sign(a):
 def operate(a,plicand):
 	decider=a[-2]+a[-1]
 	if decider=="10":
-		a=add(a[:11],twos_complement(plicand))+a[11:]
+		a=add(a[:11],twos_complement(plicand,11))+a[11:]
 	if decider=="01":
 		a=add(a[:11],plicand)+a[11:]
 	return rightShift(a)
@@ -27,11 +27,11 @@ def rightShift(a):
 
 
 def boothes(a,b):
-	plicand=convert_twos_complement(a)
+	plicand=convert_twos_complement(a,11)
 
 	# plicand="0"*(11-len(plicand))+plicand
 
-	plier=convert_twos_complement(b)
+	plier=convert_twos_complement(b,11)
 	count=11
 	newplier=11*"0"+plier+"0"
 	for i in range(count):
@@ -39,12 +39,13 @@ def boothes(a,b):
 		# print(len(newplier))
 		newplier=operate(newplier,plicand)
 
-	return newplier[:22]
+	value=twos_complement_to_decimal(newplier[:22])
+	print(value)
 print("Enter multiplicand : ")
 a=int(input())
 print("Enter multipier : ")
 b=int(input())
-print(boothes(a,b))
+boothes(a,b)
 
 
 
