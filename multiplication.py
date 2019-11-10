@@ -40,7 +40,16 @@ def boothes(a,b):
 		newplier=operate(newplier,plicand)
 	print(newplier[:22])
 	value=twos_complement_to_decimal(newplier[:22])
-	print(value)
+	print("Ans:",value)
+
+c=[456,-3,-20,-1000,5]
+d=[0,-10,3,-1000,5]
+
+for i in range(5):
+	print("Sample Test",i+1,":",c[i],"multiplied by",d[i])
+	boothes(c[i],d[i])
+	print("----x----x-----x-----x----")
+
 print("Enter multiplicand : ")
 a=int(input())
 print("Enter multipier : ")
