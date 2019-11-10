@@ -1,0 +1,31 @@
+This is the report for :
+Vishwesh Kumar
+Pankil Kalra 
+The following algorithm for Division was used 
+1. Load divisor into m and the dividend into A, Q(n bits each) registers. Dividend must be 2n-bit twos complement number
+00000000110 (6)  becomes 00000000000 00000110
+11111111010 (-6) becomes 11111111111 11111010
+2. leftShift dividend stored in registers A and Q
+Store A in seperate register, in case restoring is required
+3. If M and A have the same signs, 
+subtract M from A 
+else
+	add M to A
+4.Step 3 is not reverted if the sign of A does not change after the addition/subtraction of M
+--> If this is the case : set least significant bit of Q to 1
+--> Else restore the value of A
+5.Repeat above steps the same numebr of times as the number of bits in dividend
+6.A has the remainder : and Q has the quotient 
+If the sign of the divisor and dividend are not the same then the quotient is the twos complement of Q
+
+
+The following alogrithm for Boothes Multiplication was used :
+
+1.The multiplier and multiplicand were stored in registers 
+2.The last two bits were used to check what to do with the current answer
+Initialize the answer number to "0" in half the bits and the multiplier in the other half, along with a boothes bit set to "0 " at the end
+-> If '01': add the multiplicand to the initial half bits of the number
+-> If '10': subtract the same 
+Right shift the answer 
+3.Do step 2 the same numebr of times as the number of bits  
+4.Report answer 

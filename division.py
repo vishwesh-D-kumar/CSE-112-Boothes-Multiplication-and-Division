@@ -41,6 +41,7 @@ def boothes(dividend,divisor):
 		q=twos_complement(q,11)
 	if flag1==1 and flag2==1:
 		a=twos_complement(a,11)
+	print("Quotient:",q,"Remainder:",a)
 	a=twos_complement_to_decimal(a)
 	q=twos_complement_to_decimal(q)	
 	print("Quotient:",q,"Remainder:",a)

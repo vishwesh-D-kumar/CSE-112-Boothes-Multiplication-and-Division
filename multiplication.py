@@ -38,7 +38,7 @@ def boothes(a,b):
 		print(newplier[:11],newplier[11:22],newplier[22])
 		# print(len(newplier))
 		newplier=operate(newplier,plicand)
-
+	print(newplier[:22])
 	value=twos_complement_to_decimal(newplier[:22])
 	print(value)
 print("Enter multiplicand : ")
