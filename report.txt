@@ -1,6 +1,7 @@
 This is the report for :
 Vishwesh Kumar
-Pankil Kalra 
+Pankil Kalra
+
 The following algorithm for Division was used 
 1. Load divisor into m and the dividend into A, Q(n bits each) registers. Dividend must be 2n-bit twos complement number
 00000000110 (6)  becomes 00000000000 00000110
@@ -17,10 +18,10 @@ else
 5.Repeat above steps the same numebr of times as the number of bits in dividend
 6.A has the remainder : and Q has the quotient 
 If the sign of the divisor and dividend are not the same then the quotient is the twos complement of Q
-
+Complexity of algos are O(n**2) where n is the number of bits in the divisor
 
 The following alogrithm for Boothes Multiplication was used :
-
+Complexity of algos are O(n**2) where n is the number of bits in the multiplicand/ multiplier
 1.The multiplier and multiplicand were stored in registers 
 2.The last two bits were used to check what to do with the current answer
 Initialize the answer number to "0" in half the bits and the multiplier in the other half, along with a boothes bit set to "0 " at the end
