@@ -46,6 +46,14 @@ def boothes(dividend,divisor):
 	q=twos_complement_to_decimal(q)	
 	print("Quotient:",q,"Remainder:",a)
 
+c=[456,-10,-20,-1000,1000]
+d=[0,-3,3,-1,1000]
+
+for i in range(5):
+	print("Sample Test",i+1,":",c[i],"divided by",d[i])
+	boothes(c[i],d[i])
+	print("----x----x-----x-----x----")	
+
 print("Enter Dividend : ")
 dividend=int(input())
 print("Enter Divisor : ")
